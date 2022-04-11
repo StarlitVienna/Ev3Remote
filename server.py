@@ -132,4 +132,4 @@ while running:
 
 
         
-s.close()
+#s.close()
