@@ -1,0 +1,28 @@
+ScreenManagement:
+    MainScreen:
+
+<MainScreen>:
+    MDBoxLayout:
+        rows: 1
+        orientation: 'vertical'
+
+        Button:
+            size_hint: .05, .05
+            #background_color: 0, 0, 0 ,0
+            on_press: root.arrow_up_press()
+            on_release: root.arrow_up_release()
+            pos_hint: {'center_x': .5}
+
+            Image:
+                id: uparrow
+                source: './imgs/arrowupblank.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        StackLayout:
+            orientation: 'tb-lr'
+            size_hint: 1, .15
+
+            Button:
+                size_hint: 1, 1
+

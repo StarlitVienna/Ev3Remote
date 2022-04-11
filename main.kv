@@ -1,0 +1,58 @@
+#: include RemoteScreen.kv
+#: import Remote RemoteScreen.Remote
+
+ScreenManagement:
+    MainScreen:
+    Remote:
+
+<MainScreen>:
+    name: 'beginning'
+    GridLayout:
+        cols: 1
+        
+        Widget:
+
+        StackLayout:
+            orientation: 'tb-lr'
+            MDLabel:
+                text: 'Ev3 remote app \n Please connect'
+                halign: 'center'
+                font_style: 'H4'
+        
+        MDBoxLayout:
+            FloatLayout:
+
+            MDTextField:
+                id: IP
+                size_hint: 2, None
+                hint_text: 'IP'
+                mode: 'rectangle'
+
+            FloatLayout:
+
+        MDBoxLayout:
+            FloatLayout:
+
+            MDTextField:
+                id: PORT
+                size_hint: 1, None
+                hint_text: 'PORT'
+                mode: 'rectangle'
+
+            FloatLayout:
+
+        MDBoxLayout:
+            FloatLayout:
+
+            MDRectangleFlatButton:
+                text: 'Connect'
+                pos_hint: {'center_x': .5}
+                on_release: root.connect(IP.text, PORT.text)
+
+            FloatLayout:
+        
+        Widget:
+
+
+<Remote>:
+    name: 'Remote'

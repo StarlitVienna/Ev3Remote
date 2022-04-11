@@ -1,0 +1,70 @@
+<Remote>:
+    GridLayout:
+        cols: 1
+        #spacing: 10
+
+        Button:
+            background_color: 0, 0, 0 ,0
+            #on_press: uparrow.source="./imgs/press/arrup.png"
+            on_press: root.control('A', 'MAB1')
+            on_release: uparrow.source="./imgs/arrs/arup.png"
+
+            Image:
+                id: uparrow
+                source: './imgs/arrs/arup.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+
+        StackLayout:
+            orientation: 'tb-lr'
+            size_hint: 1, .75
+            Button:
+                background_color: 0, 0, 0 ,0
+                size_hint: .3333333333333, 1
+                #on_press: leftarrow.source="./imgs/press/arleft.png"
+                on_press: root.control('B', 'MA1')
+                on_release: leftarrow.source="./imgs/arrs/arleft.png"
+                                
+                Image:
+                    id: leftarrow
+                    source: './imgs/arrs/arleft.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+
+            Button:
+                background_color: 0, 0, 0 ,0
+                size_hint: .3333333333333, 1
+                on_press: root.control(None, 'scream')
+                Image:
+                    id: middlebtn
+                    source: './imgs/arrs/square.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+
+            Button:
+                background_color: 0, 0, 0 ,0
+                size_hint: .3333333333333, 1
+                #on_press: rightarrow.source="./imgs/press/arright.png"
+                on_press: root.control('C', 'MB1')
+                on_release: rightarrow.source="./imgs/arrs/arright.png"
+                Image:
+                    id: rightarrow
+                    source: './imgs/arrs/arright.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+
+        Button:
+            background_color: 0, 0, 0 ,0
+            #on_press: downarrow.source="./imgs/press/arrdown.png"
+            on_press: root.control('D', 'MAB-1')
+            on_release: downarrow.source="./imgs/arrs/ardown.png"
+            Image:
+                id: downarrow
+                source: './imgs/arrs/ardown.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
