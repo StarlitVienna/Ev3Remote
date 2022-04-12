@@ -126,6 +126,7 @@ while running:
             try:
                 ev3.speaker.beep(500, 4000)
             except Exception as e:
+                pass
                 #print(e)
             #print('scream')
 
